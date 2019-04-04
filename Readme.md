@@ -3,7 +3,7 @@
 
 * [Helper.cs](./CS/App_Code/Helper.cs) (VB: [Helper.vb](./VB/App_Code/Helper.vb))
 * [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
-* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx](./VB/Default.aspx))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 * [script.js](./CS/script.js) (VB: [script.js](./VB/script.js))
 <!-- default file list end -->
 # How to use jQuery to drag and drop items from one ASPxGridView to another
