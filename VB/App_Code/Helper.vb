@@ -4,7 +4,7 @@ Imports System.Data
 Imports System.Linq
 Imports System.Web
 Imports System.Web.SessionState
-Imports DevExpress.Web.ASPxGridView
+Imports DevExpress.Web
 
 ''' <summary>
 ''' Summary description for Helper

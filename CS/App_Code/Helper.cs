@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.SessionState;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 
 /// <summary>
 /// Summary description for Helper

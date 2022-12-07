@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 
 public partial class _Default : System.Web.UI.Page {
     Helper helper = new Helper();
@@ -16,7 +16,7 @@ public partial class _Default : System.Web.UI.Page {
         helper.BindGrids(GridFrom, GridTo);
 
     }
-    protected void cbPanel_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e) {
+    protected void cbPanel_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e) {
         var rowKey = e.Parameter.Split('|')[0];
         var leftToRight = Convert.ToBoolean(e.Parameter.Split('|')[1]);
 

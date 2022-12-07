@@ -5,7 +5,7 @@ Imports System.Linq
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
-Imports DevExpress.Web.ASPxGridView
+Imports DevExpress.Web
 
 Partial Public Class _Default
     Inherits System.Web.UI.Page
@@ -19,7 +19,7 @@ Partial Public Class _Default
         helper.BindGrids(GridFrom, GridTo)
 
     End Sub
-    Protected Sub cbPanel_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxClasses.CallbackEventArgsBase)
+    Protected Sub cbPanel_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.CallbackEventArgsBase)
         Dim rowKey = e.Parameter.Split("|"c)(0)
         Dim leftToRight = Convert.ToBoolean(e.Parameter.Split("|"c)(1))
 
