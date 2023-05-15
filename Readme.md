@@ -14,7 +14,7 @@ This example demonstrates how to use the jQuery framework to drag rows from one 
 
 ## Overview
 
-Create a callback panel and populate it with grid controls. Use jQuery UI [Draggable](http://jqueryui.com/draggable/) and [Droppable](http://jqueryui.com/droppable/") plug-ins and define `draggable` and `droppable` items.
+Create a callback panel and populate it with grid controls. Use jQuery UI [Draggable](http://jqueryui.com/draggable/) and [Droppable](http://jqueryui.com/droppable/) plug-ins and define `draggable` and `droppable` items.
 
 ```aspx
 <Styles>
