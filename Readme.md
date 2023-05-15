@@ -40,3 +40,8 @@ Handle the `drop` event of the `droppable` items to send a callback to the callb
 * [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 * [script.js](./CS/script.js) (VB: [script.js](./VB/script.js))
+
+## More Examples
+
+* [Grid View for ASP.NET Web Forms - Reorder Grid Rows Using Buttons and Drag-and-Drop](https://github.com/DevExpress-Examples/asp-net-web-forms-grid-reorder-rows-using-buttons-or-drag-and-drop)
+* [Grid View for ASP.NET MVC - How to use jQuery to drag and drop items from one grid to another](https://github.com/DevExpress-Examples/gridview-how-to-drag-and-drop-items-from-one-grid-to-another-t116869)
