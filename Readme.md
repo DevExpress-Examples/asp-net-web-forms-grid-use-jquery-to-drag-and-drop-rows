@@ -1,58 +1,47 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128543647/13.2.9%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1810)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
-
-* [Helper.cs](./CS/App_Code/Helper.cs) (VB: [Helper.vb](./VB/App_Code/Helper.vb))
-* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
-* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
-* [script.js](./CS/script.js) (VB: [script.js](./VB/script.js))
-<!-- default file list end -->
-# How to use jQuery to drag and drop items from one ASPxGridView to another
+# Grid View for ASP.NET Web Forms - How to use jQuery to drag and drop items from one grid to another
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/e1810/)**
 <!-- run online end -->
 
+This example demonstrates how to use the jQuery framework to drag rows from one grid to another.
 
-<p>The example demonstrates how to use the jQuery framework to drag an item from one grid to another.</p>
-<p>- Use jQuery UI <a href="http://jqueryui.com/draggable/">Draggable</a> and <a href="http://jqueryui.com/droppable/">Droppable</a> plug-ins;<br />- Define "draggable" and "droppable" items:</p>
+![Drag and drop grid rows](dragAndDropGridRows.png)
 
+## Overview
+
+Create a callback panel and populate it with grid controls. Use jQuery UI [Draggable](http://jqueryui.com/draggable/) and [Droppable](http://jqueryui.com/droppable/") plug-ins and define `draggable` and `droppable` items.
 
 ```aspx
 <Styles>
     <Table CssClass="droppableLeft"></Table>
     <Row CssClass="draggableRow left"></Row>
 </Styles>
-
 ```
 
-
-<p> - Use the invisible <strong>ASPxGlobalEvents</strong> control and handle its client-side ControlsInitialized/EndCallback events;<br />- Initialize the defined draggable/droppable items via the corresponding jQuery selectors. The "start" event handler can be used to obtain the key of the dragged row and apply conditional styling to it:</p>
-
+Add the [ASPxGlobalEvents]() control to the page and handle its client-side [ControlsInitialized]() and [EndCallback]() events. In the handlers, use the corresponding jQuery selectors to initialize the specifed `draggable` and `droppable` items. Use the `start` event handler to obtain the dragged row's key value and apply style settings to that row based on a condition.
 
 ```js
 start: function (ev, ui) {
     var $sourceElement = $(ui.helper.context);
     var $draggingElement = $(ui.helper);
-     //style elements
+    // Style elements
     $sourceElement.addClass("draggingStyle");
     $draggingElement.addClass("draggingStyle");
-     //find key
+    // Find the row's key value
     var sourceGrid = ASPxClientGridView.Cast($draggingElement.hasClass("left") ? "gridFrom" : "gridTo");
     rowKey = sourceGrid.GetRowKey($sourceElement.index() - 1);
 }
-
 ```
 
+Handle the `drop` event of the `droppable` items to send a callback to the callback panel to configure the grid's edit functionality.
 
-<p>- Handle the "drop" event of the "droppable" items and perform a callback to the callback panel that has both grids nested inside to perform the data editing functionality.</p>
-<p>Select the "script.js" source file and review the comments to find an illustration of the above steps.</p>
-<br />
-<p><strong>See </strong><strong>A</strong><strong>lso:<br /></strong><a href="https://www.devexpress.com/Support/Center/p/T116869">T116869: GridView - How to drag and drop items from one grid to another</a><strong><br /> </strong><a href="https://www.devexpress.com/Support/Center/p/E4582">E4582: How to reorder ASPxGridView rows using buttons or drag-and-drop</a></p>
+## Files to Review
 
-<br/>
+* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
+* [script.js](./CS/script.js) (VB: [script.js](./VB/script.js))
 
+## More Examples
 
+* [Grid View for ASP.NET Web Forms - Reorder Grid Rows Using Buttons and Drag-and-Drop](https://github.com/DevExpress-Examples/asp-net-web-forms-grid-reorder-rows-using-buttons-or-drag-and-drop)
+* [Grid View for ASP.NET MVC - How to use jQuery to drag and drop items from one grid to another](https://github.com/DevExpress-Examples/gridview-how-to-drag-and-drop-items-from-one-grid-to-another-t116869)
