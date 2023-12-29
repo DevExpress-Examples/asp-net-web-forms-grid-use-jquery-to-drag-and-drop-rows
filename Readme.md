@@ -9,9 +9,6 @@
 * [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
 <!-- default file list end -->
 # How to use jQuery to drag and drop items from one ASPxGridView to another
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128543647/)**
-<!-- run online end -->
 
 
 <p>The example demonstrates how to use the jQuery framework to drag an item from one grid to another.</p>
